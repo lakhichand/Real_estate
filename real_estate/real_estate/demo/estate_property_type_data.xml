@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+	<data>
+		<!-- property type data -->
+		<record id="residential_property_type" model="estate.property.type">
+			<field name="name">Residential</field>
+		</record>
+
+		<record id="commercial_property_type" model="estate.property.type">
+			<field name="name">commercial</field>
+		</record>
+		
+		<record id="industrial_property_type" model="estate.property.type">
+			<field name="name">industrial</field>
+		</record>
+
+		<record id="land_property_type" model="estate.property.type">
+			<field name="name">land</field>
+		</record>
+		
+		<record id="xyz_property_type" model="estate.property.type">
+			<field name="name">xyz</field>
+		</record>
+
+		<record id="transportation_property_type" model="estate.property.type">
+			<field name="name">transportation</field>
+		</record>
+
+		<record id="forest_property_type" model="estate.property.type">
+			<field name="name">forest</field>
+		</record>
+
+		<record id="agriculture_property_type" model="estate.property.type">
+			<field name="name">agricultures</field>
+		</record>
+
+
+	</data>
+</odoo>

@@ -1,0 +1,105 @@
+<!-- 
+<odoo>
+    <template id="website_support">
+    <t t-call="website.layout">
+        <t t-set="title">Estate Properties</t>
+        <div class="oe_structure">
+            <div class="container">
+                <div class="property-list">
+                        <div class="property-card">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Expected Price</th>
+                                        <th>Image</th>
+                                        
+                                    </tr>
+                                </thead>
+                                 <tbody>
+                                 <t t-foreach="props" t-as="prop">
+
+                                    <tr>
+                                        <td><t t-esc="prop.name"/></td>
+                                        <td><t t-esc="prop.expected_price"/></td>
+                                        <td><t t-esc="prop.description"/></td>
+                                        <td> <span t-field="prop.img" t-options='{"widget":"image","width":150}'/></td>
+                                    </tr>
+                                </t>
+                                </tbody>
+                            </table> 
+                            <t t-foreach="props" t-as="prop">
+                                <div class="card">
+                                    <span t-field="prop.img" style="width:100%"/>  
+                                    <h1>Estate property</h1>
+                                    <p class="price"><t t-esc="prop.expected_price"/></p>
+                                    <p>Description : <t t-esc="prop.description"/></p>
+                                    <p><button>Add to Cart</button></p>
+                                </div>
+                            </t>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </t>
+    </template>
+</odoo> -->
+
+<odoo>
+    <template id="website_support">
+        <style>
+            .property-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .card {
+                
+                max-width: calc(33.33% - 20px); /* 3 cards per row with margin */
+                margin-bottom: 20px;
+                padding: 10px;
+                text-align: center;
+                font-family: Arial;
+                box-sizing: border-box;
+            }
+            .price {
+                color: grey;
+                font-size: 22px;
+            }
+            .card button {
+                border: none;
+                outline: 0;
+                padding: 12px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+            } 
+        </style>
+
+        <t t-call="website.layout">
+            <t t-set="title">Estate Properties</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="property-list">
+                        <t t-foreach="props" t-as="prop">
+                            <div class="card" style="position:relative;height:400px;width:300px">
+                                <h4><span t-field="prop.img" t-options='{"widget":"image","width":150}'/></h4>
+                                <h3><t t-esc="prop.name"/></h3>
+                                <p class="price"><t t-esc="prop.expected_price"/></p>
+                                <!-- <p><button>Add to Cart</button></p> -->
+                                <div style="border:2px solid black;position:absolute;bottom:0px;width:100%">
+                                    <button>Test</button>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

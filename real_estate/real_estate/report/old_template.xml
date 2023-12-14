@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="estate_property_report_id">
+        <t t-foreach="docs" t-as="prope">
+            <t t-call="web.html_container">
+                <style>
+                    offers.th, offers.td {
+                      border-style: dotted;
+                    }
+                </style>
+                <t t-call="web.external_layout">
+                    <div class="header" style="border-bottom: 3px solid red;">
+                           <h1> My name is lucky </h1>
+                           <bold> hello world >>>> </bold>
+                    </div>
+                        <div class="content">
+                            <div class="l1" style="">
+                                <h1> <i class="fa fa-home" aria-hidden="true"></i> Estate Property Report</h1><br/>
+                            </div>
+                           <!--  <table class="table table-condensed">
+                                
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Expected Price</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><t t-esc="prope.name"/></td>
+                                        <td><t t-esc="prope.description"/></td>
+                                        <td><t t-esc="prope.expected_price"/></td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table> -->
+                            <h5><b>  Salesman : </b><t t-esc="prope.user_id.name"/></h5>
+                            <h5><b>  Expected Price : </b> <t t-esc="prope.expected_price"/></h5>
+                            <h5><b>  Status : </b> <t t-esc="prope.state"/> </h5>    
+                            <h5><b>  Property Type : </b><t t-esc="prope.property_type_id.name"/></h5>
+                            <h5><b>  Postcode : </b><t t-esc="prope.postcode"/></h5>
+                            <h5><b>  Deadline Date : </b><t t-esc="prope.create_date.strftime('%d/%m/%Y')"/></h5><br/><br/>
+                            
+
+                            
+                            
+                            <h2>Offers</h2>
+                            <table class="table table-condensed">
+                                
+                                <thead>
+                                    <tr>
+                                        <th>Offer Date</th>
+                                        <th>Price</th>
+                                        <th>Buyer</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="prope.offer_ids" t-as="offer">
+                                        <tr>
+                                            <td><t t-esc="offer.date_deadline"/></td>
+                                            <td><t t-esc="offer.price"/></td>
+                                            <td><t t-esc="offer.partner_id.name"/></td>
+                                            
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>                          
+                        </div>
+                        <div class="footer" style="border-top: 3px solid red;">
+                            <br/>
+
+                            <h6><b> Date : </b><span t-esc="time.strftime('%Y-%m-%d')"/></h6>
+                            
+                            <!-- <h6><b> Time : </b><span t-esc="time.strftime('%H:%M:%S')"/></h6> -->
+                        </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

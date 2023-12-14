@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		
+
+	   <record id="property_offer_1" model="estate.property.offer">
+		    <field name="price">10000</field>
+		    <field name="validity">14</field>
+		    <field name="partner_id" ref="base.res_partner_12"/>
+		    <field name="property_id" ref="real_estate.bigvilla_property"/>
+		</record>
+
+		<record id="property_offer_2" model="estate.property.offer">
+		    <field name="price">1500000</field>
+		    <field name="validity">14</field>
+		    <field name="partner_id" ref="base.res_partner_12"/>
+		    <field name="property_id" ref="real_estate.trailerhome_property"/>
+		</record>
+
+		<record id="property_offer_3" model="estate.property.offer">
+		    <field name="price">1500001</field>
+		    <field name="validity">14</field>
+		    <field name="partner_id" ref="base.res_partner_12"/>
+		    <field name="property_id" ref="real_estate.empire_property"/>
+		</record> 
+
+		 <record id="property_offer_1" model="estate.property.offer">
+		    <field name="price">10000</field>
+		    <field name="validity">14</field>
+		    <field name="partner_id" ref="base.res_partner_12"/>
+		    <field name="property_id" ref="real_estate.western_property"/>
+		</record>
+
+		<record id="property_offer_2" model="estate.property.offer">
+		    <field name="price">1500000</field>
+		    <field name="validity">14</field>
+		    <field name="partner_id" ref="base.res_partner_12"/>
+		    <field name="property_id" ref="real_estate.modern_house"/>
+		</record>
+
+		<record id="property_offer_3" model="estate.property.offer">
+		    <field name="price">1500001</field>
+		    <field name="validity">14</field>
+		    <field name="partner_id" ref="base.res_partner_12"/>
+		    <field name="property_id" ref="real_estate.mannat_property"/>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="estate_property_report_id">
+        <t t-foreach="docs" t-as="prope">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+
+                    <div class="content">
+                       <!--  <div class="l1" >
+                            <h1> <i class="fa fa-home" aria-hidden="true"></i> Estate Property Report</h1><br/>
+                        </div> -->
+
+                        <div class = "inherit">
+                            <t t-foreach="docs" t-as="user">
+                               <h3><i class="fa fa-home " aria-hidden="true"></i> <t t-esc="user.name"/></h3>
+                         
+                            <h5><b>  Salesman : </b><t t-esc="user.user_id.name"/></h5>
+                            <h5><b>  Expected Price : </b> <t t-esc="user.expected_price"/></h5>
+                            <h5><b>  Status : </b> <t t-esc="user.state"/> </h5>  
+                            </t>
+                        </div>
+
+                        
+                        <h2>Offers</h2>   
+                        <t t-call="real_estate.sub_template_offers_table"/>
+                            <!-- <t t-set="offers" t-value="prope.offer_ids"/> -->
+                        
+                                   
+                    </div>
+
+
+                    <div class="footer" style="border-top: 3px solid red;">
+                        <br/>
+                        <h6><b> Date : </b><span t-esc="time.strftime('%Y-%m-%d')"/></h6>
+                        <!-- <h6><b> Time : </b><span t-esc="time.strftime('%H:%M:%S')"/></h6> -->
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <template id="sub_template_offers_table">
+    <style>
+        th, td {
+            border: 2px dotted #123; 
+            <!-- padding: 5px; -->
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 40px;
+        }
+    </style>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Price</th>
+                <th>Partner</th>
+                <th>Validity (days)</th>
+                <th>Deadline</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <t t-foreach="prope.offer_ids" t-as="offer">
+                <tr>
+                    <td><t t-esc="offer.price"/></td>
+                    <td><t t-esc="offer.partner_id.name"/></td>
+                    <td><t t-esc="offer.validity"/></td>
+                    <td><t t-esc="offer.date_deadline.strftime('%Y-%m-%d')"/></td>
+                    <td><t t-esc="offer.status"/></td>
+                </tr>
+            </t>
+        </tbody>
+    </table>
+</template>
+
+
+
+
+    <template id="res_users_properties_report">
+        <t t-foreach="docs" t-as="prope">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="content">
+                        <t t-foreach="docs" t-as="user">
+                            <h4>
+                                <b>Salesman: </b><t t-esc="user.name"/></h4>
+                                <t t-if="user.property_ids">
+                                    <t t-foreach="user.property_ids" t-as="prope">
+                                        <h1><i class="fa fa-home" aria-hidden="true"></i>  
+                                               <t t-esc="prope.name"/>
+                                        </h1>
+                                            <h5><b>  Expected Price : </b> 
+                                                <t t-esc="prope.expected_price"/>
+                                            </h5>
+                                            
+                                                <p t-if="prope.offer_ids">
+                                                    <h5><b>  Status : </b> <t t-esc="prope.state"/> </h5> 
+                                                        <!-- <p t-if="prope.state == 'sold'" style="color: red;"> !!! Invoice has already been created !!</p> -->
+                                                        <t t-call="real_estate.sub_template_offers_table"/><br/>
+                                                </p>
+                                                    <p t-else="" style="color: red;">No Offers have been made it !</p>
+                                    </t>
+                                </t>
+
+                        </t>
+                    </div>
+                    <div class="footer" style="border-top: 3px solid red ;"><br/>
+                        
+                            <div class="date" style="float: left;">
+                                <h6 > <b> Date : </b>
+                                    <t t-esc="time.strftime('%Y-%m-%d')"/>
+                                </h6>
+                            </div>
+
+                            <div class="time" style="float: right;">
+                                <h6 > <b> Time : </b>
+                                    <t t-esc="time.strftime('%H:%M:%S')"/>
+                                </h6>
+                            </div>
+                        
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

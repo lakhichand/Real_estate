@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+
+	<record id="estate_property_report_action" model="ir.actions.report">
+        <field name="name">Property Report</field>
+        <field name="model">estate.property</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">real_estate.estate_property_report_id</field>
+        <field name="report_file">real_estate.estate_property_templates</field>
+        <field name="binding_model_id" ref="model_estate_property"/> 
+        <field name="binding_type">report</field>  
+    </record>
+
+    <record id="res_users_properties_report_action" model="ir.actions.report">
+        <field name="name">Real Estate Properties for Salesman</field>
+        <field name="model">res.users</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">real_estate.res_users_properties_report</field>
+        <field name="report_file">real_estate.estate_property_templates</field>
+        <field name="binding_model_id" ref="base.model_res_users"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+<!-- <report
+
+id="property_report"
+string="Property_pdf"
+model="estate.property"
+report_type="qweb-pdf"
+name="real_estate.estate_property_report_id"
+file="real_estate.estate_property_templates"
+
+/> -->
+
+</odoo>

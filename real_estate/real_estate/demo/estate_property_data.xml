@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<!-- estate_property data -->
+		<record id="bigvilla_property" model="estate.property">
+			<field name="name">Big Villa</field>
+			<field name="state">new</field>
+			<field name="description">A nice big villa</field>
+			<field name="postcode">12345</field>
+			<field name="date_availability">2020-02-02</field>
+			<field name="expected_price">1600</field>
+			<field name="bedrooms">6</field>
+			<field name="living_area">100</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="residential_property_type"/>
+		</record>
+
+		<record id="trailerhome_property" model="estate.property">
+			<field name="name">Trailer Home</field>
+			<field name="state">offer_accepted</field>
+			<field name="description">Home in trailer park</field>
+			<field name="postcode">54321</field>
+			<field name="date_availability">1970-01-01</field>
+			<field name="expected_price">10000</field>
+			<field name="selling_price">12000</field>
+			<field name="bedrooms">1</field>
+			<field name="living_area">10</field>
+			<field name="facades">4</field>
+			<field name="garage">False</field>
+		    <field name="property_type_id" ref="commercial_property_type"/>
+		</record>
+
+		<record id="western_property" model="estate.property">
+			<field name="name">western villa</field>
+			<field name="state">offer_received</field>
+			<field name="description">A nice  villa</field>
+			<field name="postcode">2345</field>
+			<field name="date_availability">2020-02-12</field>
+			<field name="expected_price">1600</field>
+			<field name="bedrooms">10</field>
+			<field name="living_area">10000</field>
+			<field name="facades">10</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">12345</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="agriculture_property_type"/>
+		</record>
+
+        <record id="empire_property" model="estate.property">
+			<field name="name">Empire</field>
+			<field name="state">canceled</field>
+			<field name="description">empired villa</field>
+			<field name="postcode">2345</field>
+			<field name="date_availability">2020-12-02</field>
+			<field name="expected_price">160000</field>
+			<field name="bedrooms">1</field>
+			<field name="living_area">100000</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="forest_property_type"/>
+		</record>
+
+		<record id="mannat_property" model="estate.property">
+			<field name="name">Mannat</field>
+			<field name="state">sold</field>
+			<field name="description">A big vila</field>
+			<field name="postcode">56789</field>
+			<field name="date_availability">2020-11-02</field>
+			<field name="expected_price">16000</field>
+			<field name="bedrooms">20</field>
+			<field name="living_area">100000</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="industrial_property_type"/>
+		</record>
+
+		<record id="modern_house" model="estate.property">
+			<field name="name">Modern</field>
+			<field name="state">canceled</field>
+			<field name="description">modern villa</field>
+			<field name="postcode">0987</field>
+			<field name="date_availability">2020-09-02</field>
+			<field name="expected_price">16000</field>
+			<field name="bedrooms">6</field>
+			<field name="living_area">100</field>
+			<field name="facades">10</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="xyz_property_type"/>
+		</record>
+
+		<record id="jmunadas_property" model="estate.property">
+			<field name="name">jmunadas</field>
+			<field name="state">new</field>
+			<field name="description">Jamunadas Ashram</field>
+			<field name="postcode">45678</field>
+			<field name="date_availability">2020-10-02</field>
+			<field name="expected_price">1800000</field>
+			<field name="bedrooms">1</field>
+			<field name="living_area">10000</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="transportation_property_type"/>
+		</record>
+
+		<record id="manchester_property" model="estate.property">
+			<field name="name">Manchester</field>
+			<field name="state">offer_received</field>
+			<field name="description">A nice big villa</field>
+			<field name="postcode">12345</field>
+			<field name="date_availability">2020-02-02</field>
+			<field name="expected_price">1600</field>
+			<field name="bedrooms">6</field>
+			<field name="living_area">100</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="residential_property_type"/>
+		</record>
+
+		<record id="silver_wood_property" model="estate.property">
+			<field name="name">Silver wood</field>
+			<field name="state">offer_accepted</field>
+			<field name="description">A nice big villa</field>
+			<field name="postcode">12345</field>
+			<field name="date_availability">2020-02-02</field>
+			<field name="expected_price">10000</field>
+			<field name="bedrooms">6</field>
+			<field name="living_area">100</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="residential_property_type"/>
+		</record>
+
+		<record id="sloopy_property" model="estate.property">
+			<field name="name">The Sloopy House</field>
+			<field name="state">sold</field>
+			<field name="description">A nice big villa</field>
+			<field name="postcode">12345</field>
+			<field name="date_availability">2020-02-02</field>
+			<field name="expected_price">16000</field>
+			<field name="bedrooms">6</field>
+			<field name="living_area">100</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="residential_property_type"/>
+		</record>
+
+		<record id="Mulberry_property" model="estate.property">
+			<field name="name">Mulberry</field>
+			<field name="state">canceled</field>
+			<field name="description">A nice big villa</field>
+			<field name="postcode">12345</field>
+			<field name="date_availability">2020-02-02</field>
+			<field name="expected_price">12340</field>
+			<field name="bedrooms">6</field>
+			<field name="living_area">100</field>
+			<field name="facades">4</field>
+			<field name="garage">True</field>
+			<field name="garden">True</field>
+			<field name="garden_area">100000</field>
+			<field name="garden_orientation">s</field>
+			<field name="property_type_id" ref="residential_property_type"/>
+		</record>
+
+
+
+	</data>
+</odoo>
